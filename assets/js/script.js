@@ -35,6 +35,18 @@ cell.addEventListener('click', () => {
     }
     });
 });
-
+//add event listener to reset button
+let resetButton = document.querySelector('#reset');
+resetButton.addEventListener('click', () => {
+    board.forEach((cell) => {
+        cell.innerHTML = "";
+        cell.classList.remove('cellX');
+        cell.classList.remove('cellO');
+    });
+    player1.squers = [];
+    player2.squers = [];
+    currentPlayer = player1;
+    gameOver = false;
+});
 
 
