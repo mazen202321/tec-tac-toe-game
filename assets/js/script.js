@@ -1,1 +1,40 @@
 
+const possiboleWines=[[0,1,2],[3,4,5],[6,7,8],[0,4,8],[2,4,6],[0,3,6],[1,4,7],[2,5,8]];
+let player1 = {
+    name: "Player 1",
+    value: "X",
+    score: 0,
+    squers: []
+};
+let player2 = {
+    name: "coumputer",
+    value: "O",
+    score: 0,
+    squers: []
+};
+let currentPlayer = player1;
+let gameOver = false;
+let board = document.querySelectorAll('.cell');
+//add event listener to each cell
+board.forEach((cell) => {
+cell.addEventListener('click', () => {
+    if (cell.innerHTML === "" && !gameOver) {
+        cell.innerHTML = currentPlayer.value;
+        currentPlayer.squers.push(cell);
+       
+        if (currentPlayer === player1) {
+            cell.classList.add('cellX');
+            currentPlayer = player2;
+
+        }else {
+            cell.classList.add('cellO');
+            currentPlayer = player1;
+        }
+
+       
+    }
+    });
+});
+
+
+
