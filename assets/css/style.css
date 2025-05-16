@@ -1,0 +1,106 @@
+body{
+    color: whitesmoke;
+    background-color: rgb(43, 40, 40);
+}
+.container{
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    background-color: rgb(43, 40, 40);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.board-Game{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    
+    
+    width: 100%;
+    height: 500px;
+    
+    box-sizing: border-box;
+}
+.board-Game::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.board-Game::before{
+    content: '';
+    display: block;
+    clear: both;
+}
+.btn{
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgb(94, 105, 141);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+   
+}  
+.btn:hover{
+    background-color: rgb(129, 124, 124);
+    transition: background-color 0.3s ease;
+} 
+
+
+
+.cell{
+    width: 30%;
+    height: 30%;
+    background-color: rgb(129, 124, 124);
+    cursor: pointer;
+    font-size: 2em;
+   
+    
+
+  
+}
+.cellX{
+    background-color: rgb(129, 124, 124);
+    color: rgb(0, 0, 0);
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cellO{
+    background-color: rgb(129, 124, 124);
+    color: rgb(224, 162, 162);
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cell:hover{
+    background-color: rgb(194, 179, 179);
+    transition: background-color 0.3s ease;
+}
+ 
