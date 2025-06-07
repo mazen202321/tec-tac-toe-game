@@ -40,9 +40,7 @@ board.forEach((cell, index) => {
         cell.classList.add("cellO");
       }
       checkWinner(currentPlayer);
-      currentPlayer == player1
-        ? (currentPlayer = player2)
-        : (currentPlayer = player1);
+      currentPlayer == player1? (currentPlayer = player2): (currentPlayer = player1);
     }
   });
 });
@@ -59,7 +57,11 @@ resetButton.addEventListener("click", () => {
   player1.squers = [];
   player2.squers = [];
   currentPlayer = player1;
+  player1.score = 0;
+    player2.score = 0;
   gameOver = false;
+  updateScore();
+
 });
 console.log(player1);
 console.log(player2);
